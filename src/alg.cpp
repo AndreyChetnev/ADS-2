@@ -4,19 +4,19 @@
 
 
 double pown(double value, uint16_t n) {
-  if (n == 0) {
-    return 1;
+  double res = 1.0;
+  for (uint16_t i = 1; i <=n; i++) {
+    res *= value;
   }
-  else 
-    return value * pown(value, n - 1);
+  return res;
 }
 
 uint64_t fact(uint16_t n) {
-  if (n == 1 || n == 0) {
-    return 1;
+  uint64_t res = 1;
+  for (uint16_t i = 1; i <=n; i++) {
+    res *=i;
   }
-  else 
-    return n * fact(n-1);
+  return res;
 }
 
 double calcItem(double x, uint16_t n) {
